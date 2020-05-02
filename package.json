@@ -1,0 +1,22 @@
+{
+  "name": "examui",
+  "version": "1.0.0",
+  "description": "User Interface",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/carwyn987/TestAdministratorUI.git"
+  },
+  "keywords": [
+    "exam"
+  ],
+  "author": "Carwyn Collinsworth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carwyn987/TestAdministratorUI/issues"
+  },
+  "homepage": "https://github.com/carwyn987/TestAdministratorUI#readme"
+}
