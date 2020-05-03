@@ -2,9 +2,12 @@
   "name": "examui",
   "version": "1.0.0",
   "description": "User Interface",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "buildDev": "webpack --mode development",
+    "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,14 @@
   "bugs": {
     "url": "https://github.com/carwyn987/TestAdministratorUI/issues"
   },
-  "homepage": "https://github.com/carwyn987/TestAdministratorUI#readme"
+  "homepage": "https://github.com/carwyn987/TestAdministratorUI#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
 }
