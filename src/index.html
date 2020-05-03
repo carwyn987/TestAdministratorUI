@@ -2,8 +2,51 @@
 <html>
   <head>
     <title>Getting Started</title>
+    <link rel="stylesheet" type="text/css" href="styling.css">
   </head>
   <body>
+    <table style="visibility: hidden;" id="qTable">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Type</th>
+          <th>Question</th>
+          <th>Choice 1</th>
+          <th>Choice 2</th>
+          <th>Choice 3</th>
+          <th>Choice 4</th>
+          <th>Choice 5</th>
+        </tr>
+      </thead>
+      <tbody id="questionsTableBody">
+      </tbody>
+    </table>
+
+
+    <button type="button" id="loadQuestionTable">Load</button>
+    <button type="button" id="deleteSelectedQuestions">Delete</button>
+
     <script src="main.js"></script>
+
+    <!--Question Template in form of table row-->
+    <template id="qRowTemplate">
+      <tr>
+        <td class="qSelector"><input type="checkbox"></td>
+        <td class="qType">
+          <select>
+            <option></option>
+            <option class="bool">True False</option>
+            <option class="multi" id="#foo">Multi-Choice</option>
+            <option class="free">Free Form</option>
+           </select>
+        </td>
+        <td class="qText"><textarea rows="1" cols="40">What is 2 + 3?</textarea></td>
+        <td class="qChoice1"><textarea rows="1" cols="20" class="qChoice">3</textarea></td>
+        <td class="qChoice2"><textarea rows="1" cols="20" class="qChoice">4</textarea></td>
+        <td class="qChoice3"><textarea rows="1" cols="20" class="qChoice">5</textarea></td>
+        <td class="qChoice4"><textarea rows="1" cols="20" class="qChoice">6</textarea></td>
+        <td class="qChoice5"><textarea rows="1" cols="20" class="qChoice">7</textarea></td>
+      </tr>
+    </template>
   </body>
 </html>

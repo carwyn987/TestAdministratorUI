@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "buildDev": "webpack --mode development",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open",
+    "lint": "eslint . --ext=js --fix",
+    "watchLint": "esw . --fix --watch"
   },
   "repository": {
     "type": "git",
@@ -23,12 +25,16 @@
   },
   "homepage": "https://github.com/carwyn987/TestAdministratorUI#readme",
   "devDependencies": {
-    "html-webpack-plugin": "^4.3.0",
+    "copy-webpack-plugin": "^5.1.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-watch": "^6.0.1"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "axios": "^0.19.2"
   }
 }

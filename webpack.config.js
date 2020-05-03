@@ -1,6 +1,5 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
-const fs = require('fs')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -10,17 +9,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-      new HtmlWebpackPlugin({
-          hash : true,
-          template : 'src/index.html',
-          finalName : 'index.html',
-          favIcon : 'src/favIcon.ico',
-          chunks : ['main1']
-      })
+    new CopyPlugin([
+      { from: 'src/index.html', to: '.' },
+      { from: 'src/styling.css', to: '.' },
+    ]),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000
-  }
-};
+    port: 9000,
+  },
+}
