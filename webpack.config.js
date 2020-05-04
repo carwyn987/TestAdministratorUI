@@ -12,6 +12,7 @@ module.exports = {
     new CopyPlugin([
       { from: 'src/index.html', to: '.' },
       { from: 'src/styling.css', to: '.' },
+      { from: 'src/favicon.ico', to: '.' },
     ]),
   ],
   devServer: {

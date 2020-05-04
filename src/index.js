@@ -1,4 +1,6 @@
 import axios from 'axios'
+// eslint-disable-next-line no-unused-vars
+import * as a from './fileUpload'
 
 document.getElementById('loadQuestionTable').addEventListener('click', loadQuestionTableFromDB)
 document.getElementById('deleteSelectedQuestions').addEventListener('click', deleteSelectedRows)

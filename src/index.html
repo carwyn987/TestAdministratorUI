@@ -3,6 +3,7 @@
   <head>
     <title>Getting Started</title>
     <link rel="stylesheet" type="text/css" href="styling.css">
+    <link rel="icon" href="https://www.cs.stonybrook.edu/sites/all/themes/compsci/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <table style="visibility: hidden;" id="qTable">
@@ -25,6 +26,21 @@
 
     <button type="button" id="loadQuestionTable">Load</button>
     <button type="button" id="deleteSelectedQuestions">Delete</button>
+    <form ref='uploadForm' 
+      id='uploadForm' 
+      action='http://localhost:8080/upload' 
+      method='post' 
+      encType="multipart/form-data">
+        <input type="file" name="sampleFile" />
+        <input type='submit' value='Upload!' />
+    </form>
+
+    <hr>
+      <label for="fileUpload">Upload questions csv file</label>
+      <input type="file"
+        id="fileUpload" name="fileUpload"
+        accept="text/csv">
+    <hr>
 
     <script src="main.js"></script>
 
