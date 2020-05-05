@@ -30,6 +30,8 @@ async function loadQuestionTableFromDB() {
         break
       case 'boolean':
         rowClone.querySelector('.qType .bool').selected = true
+        e.multiChoices[0] = 'TRUE'
+        e.multiChoices[1] = 'FALSE'
         break
       default:
         throw new Error(`Unrecognised Question Type ${e.questionType}`)
@@ -44,7 +46,16 @@ async function loadQuestionTableFromDB() {
     rowClone.querySelector('.qChoice5 textarea').value = e.questionText.length > 4 ? e.multiChoices[4] : ''
 
     const choices = rowClone.querySelectorAll('.qChoice')
-    choices[e.multiChoiceAnswer].className = 'correctAnswer'
+    if (e.questionType === 'multichoice') {
+      choices[e.multiChoiceAnswer - 1].className = 'correctAnswer'
+    }
+    if (e.boolAnswer != null && e.questionType === 'boolean') {
+      if (e.boolAnswer) {
+        choices[0].className = 'correctAnswer'
+      } else {
+        choices[1].className = 'correctAnswer'
+      }
+    }
 
     qTBody.appendChild(rowClone)
   })
