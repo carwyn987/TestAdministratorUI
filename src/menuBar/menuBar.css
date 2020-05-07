@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Patua+One&display=swap');
+
+#menuBar {
+    background: #333;
+    height: 43px;
+    color: white;
+}
+
+#appName {
+    padding: 12px;
+    float: left;
+    font-weight: bold;
+}
+
+#startTest {
+    padding: 12px;
+    float: left;
+    font-weight: normal;
+}
+
+#about {
+    padding: 12px;
+    float: right;
+    font-weight: normal;
+}
+
+#qTable {
+    padding: 12px;
+    float: right;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+}
