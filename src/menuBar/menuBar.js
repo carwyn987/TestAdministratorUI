@@ -1,7 +1,7 @@
 import './menuBar.css'
 
 document.getElementById('about').addEventListener('click', () => {
-  document.getElementById('mainFrame').src = 'http://google.com/search?'
+  document.getElementById('mainFrame').src = 'http://carwyncollinsworth.com/index.html'
 })
 
 document.getElementById('qTable').addEventListener('click', () => {

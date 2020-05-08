@@ -5,12 +5,20 @@
     <link rel="icon" href="https://www.cs.stonybrook.edu/sites/all/themes/compsci/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <div id="menuBar">
-        <div id="appName">Test Administrator</div>
-        <div id="startTest">Start Test</div>
-        <div id="about">About</div>
-        <div id="qTable">Question Admin</div>
+    <div id='outer'>
+
+      <div id="menuBar">
+          <div id="appName">Test Administrator</div>
+          <div id="startTest">Start Test</div>
+          <div id="about">About</div>
+          <div id="qTable">Question Admin</div>
+          <div id="template"><a href="http://localhost:8080/sampleQuestionTemplate" download="sampleQuestionTemplate.csv">Download Template</a></div>
+      </div>
+      <div id='mainArea'>
+        <iframe id="mainFrame" width="100%"></iframe>
+      </div>
+
     </div>
-    <iframe id="mainFrame" width="100%" height="900px"></iframe>
+
    </body>
 </html>

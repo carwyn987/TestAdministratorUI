@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Patua+One&display=swap');
 
+html,body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#outer {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+#mainArea {
+    flex-grow: 1;
+}
+
 #menuBar {
     background: #333;
     height: 43px;
@@ -24,12 +40,31 @@
     font-weight: normal;
 }
 
+#menuBar div:hover {
+    background-color: #111;
+  }
+
 #qTable {
     padding: 12px;
     float: right;
     font-weight: normal;
 }
 
-body {
-    margin: 0;
+#template {
+    padding: 12px;
+    float: right;
+    font-weight: normal;
+    color: white
+}
+
+#template, a {
+    color: white;
+    text-decoration: none;
+}
+
+
+iframe {
+    border: 0;
+    height: 100%;
+    width: 100%;
 }
