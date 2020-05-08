@@ -2,12 +2,13 @@ import axios from 'axios'
 // eslint-disable-next-line no-unused-vars
 import * as a from './fileUpload'
 import './questionAdmin.css'
+import { getBaseServerURL } from '../util/urlHelper'
 
 document.getElementById('loadQuestionTable').addEventListener('click', loadQuestionTableFromDB)
 document.getElementById('deleteSelectedQuestions').addEventListener('click', deleteSelectedRows)
 
 async function loadQuestionTableFromDB() {
-  const { data } = await axios.get('http://localhost:8080/questions')
+  const { data } = await axios.get(`${getBaseServerURL()}/questions?admin=true`)
   // console.log(data, Array.isArray(data))
   const qTBody = document.getElementById('questionsTableBody')
   document.getElementById('qTable').style.visibility = 'visible'
@@ -66,7 +67,7 @@ async function deleteSelectedRows() {
   const qRows = document.querySelectorAll('#questionsTableBody tr')
   qRows.forEach(async (e) => {
     if (e.querySelector('.qSelector input').checked) {
-      await axios.delete(`http://localhost:8080/question/${e.id}`)
+      await axios.delete(`${getBaseServerURL()}/question/${e.id}`)
       e.parentNode.removeChild(e)
     }
   })

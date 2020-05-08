@@ -1,4 +1,6 @@
 import axios from 'axios'
+import { getBaseServerURL } from '../util/urlHelper'
+
 
 document.querySelector('#fileUpload').addEventListener('change', async (event) => {
   try {
@@ -20,7 +22,7 @@ async function handleCSVUpload(event) {
   const { files } = event.target
   const formData = new FormData()
   formData.append('myFile', files[0])
-  await axios.post('http://localhost:8080/upload', formData, {
+  await axios.post(`${getBaseServerURL()}/upload`, formData, {
     headers: {
       'Content-Type': 'multipart/form-data',
     },
