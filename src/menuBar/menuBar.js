@@ -5,7 +5,7 @@ import { getBaseUIURL, getBaseServerURL } from '../util/urlHelper'
 document.getElementById('downloadTemplate').href = `${getBaseServerURL()}/sampleQuestionTemplate`
 
 document.getElementById('about').addEventListener('click', () => {
-  document.getElementById('mainFrame').src = 'http://carwyncollinsworth.com/index.html'
+  document.getElementById('mainFrame').src = `${getBaseUIURL()}/src/about/about.html`
 })
 
 document.getElementById('appName').addEventListener('click', () => {

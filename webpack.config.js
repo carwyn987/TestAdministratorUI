@@ -26,6 +26,7 @@ module.exports = {
       { from: 'src/*/*.html', to: '.' },
       { from: 'src/*/*.css', to: '.' },
       { from: 'src/favicon.ico', to: '.' },
+      { from: 'src/*/*.png', to: '.' },
     ]),
     new HtmlWebpackPlugin({
       filename: 'studentTest.html',
